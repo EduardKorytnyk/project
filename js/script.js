@@ -10,25 +10,43 @@ let appData = {
 };
 
 
-
-for (let i=0; i<2; i++){
+//цикл For 
+// for (let i=0; i<2; i++){
+//     let a = prompt("Введите обязательную статью расходов в этом месяце", ''),
+//         b = prompt("Во сколько обойдется?", );
+//         if ((typeof(a))==="string"&&(typeof(a)) != null && (typeof(b)) !=null 
+//         && a != '' && b != '' && a.length<50 ){
+//            console.log("done");
+//             appData.expenses[a] = b;
+//             continue;
+            
+//         } else {
+          
+//             //дописать else и вернуться к вопросу обратно 
+//             console.log("возврат");
+//             i=0;
+//         }
+        
+// };
+//цикл do while 
+let i=0;
+while (i<2) 
+{
     let a = prompt("Введите обязательную статью расходов в этом месяце", ''),
         b = prompt("Во сколько обойдется?", );
-        if ((typeof(a))==="string"&&(typeof(a)) != null && (typeof(b)) !=null 
-        && a != '' && b != '' && a.length<50 ){
-           console.log("done");
-            appData.expenses[a] = b;
-            continue;
-            
-        } else {
-            // a = prompt("Введите обязательную статью расходов в этом месяце", ''),
-            // b = prompt("Во сколько обойдется?", );
-            //дописать else и вернуться к вопросу обратно 
-            console.log("возврат");
-            i=0;
-        }
-        
-};
+
+    if ((typeof(a))==="string"&&(typeof(a)) != null && (typeof(b)) !=null 
+    && a != '' && b != '' && a.length<50 )
+    {
+        i=i+2;
+        console.log("done");
+        appData.expenses[a] = b;
+        console.log(appData)
+    }
+}
+
+
+
 
 appData.moneyPerDay = appData.budget / 38; 
 alert("Ежедневный бюджет: "+ appData.moneyPerDay);
